@@ -7,15 +7,39 @@
   <title>Connect with Me</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: center;
+      z-index: -1;
+    }
+  </style>
 </head>
 
-<body class="min-h-screen bg-cover bg-center bg-no-repeat bg-[url('pat.jpg')] flex items-center justify-center">
+<body class="min-h-screen flex items-center justify-center">
 
-  <div class="text-center text-white space-y-8 p-4">
+  <!-- ✅ Video Background -->
+  <video autoplay muted loop class="video-bg">
+    <source src="pat.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
 
-    <h1 class="text-5xl font-extrabold animate-pulse">Hi I'm PATRICIA! 🌐</h1>
+  <!-- ✅ Foreground Content -->
+  <div class="text-center text-white space-y-8 p-4 bg-black/50 rounded-xl shadow-xl backdrop-blur">
+    <h1 class="text-5xl font-extrabold animate-pulse">Hi I'm PATRICIA</h1>
 
-    <p class="text-xl font-light">I LOVE YOU MICO!</p>
+    <p class="text-xl font-light">Follow me on all my platforms and stay connected!</p>
 
     <div class="flex justify-center gap-6">
       <!-- Facebook -->
@@ -36,7 +60,7 @@
         </svg>
       </a>
 
-      <!-- TikTok (Official logo SVG) -->
+      <!-- TikTok -->
       <a href="https://www.tiktok.com/@hellotriciaa?is_from_webapp=1&sender_device=pc" target="_blank"
         class="bg-black hover:bg-gray-800 p-4 rounded-full transition transform hover:scale-110">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="w-8 h-8 fill-current text-white">
@@ -44,20 +68,18 @@
         </svg>
       </a>
 
-      <!-- Google Drive (Official 3-color logo SVG) -->
+      <!-- Google Drive -->
       <a href="https://drive.google.com/drive/folders/1-95Tp_lmAyC9WuGeNYMbhktCpuuXzFLz?usp=sharing" target="_blank"
         class="p-4 rounded-full transition transform hover:scale-110 bg-gradient-to-tr from-green-500 via-yellow-400 to-blue-500">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class="w-8 h-8 fill-current text-white">
           <path d="M227.12 176l-56-96H84.88l56 96ZM128 224H24l56-96h96l56 96Zm96-48H172.24L228 80H132.24l51.76 96Z"/>
         </svg>
       </a>
-
     </div>
 
-    <!-- Animation (optional) -->
+    <!-- Animation -->
     <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_1pxqjqps.json" background="transparent"
       speed="1" style="width: 150px; height: 150px; margin: auto;" loop autoplay></lottie-player>
-
   </div>
 
 </body>
